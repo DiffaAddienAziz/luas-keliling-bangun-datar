@@ -21,14 +21,14 @@ using namespace std;
 	  return keliling;
   }
   
-  void cetak_luas(int s){
+  void cetak_luas(int *s){
   	
-  	  cout<<"Luas persegi adalah : "<<luas_persegi(s)<<endl;
+  	  cout<<"Luas persegi adalah : "<<luas_persegi(*s)<<endl;
      }
   
-  void cetak_keliling(int s){
+  void cetak_keliling(int *s){
   	
-	  cout<<"Keliling persegi adalah : "<<keliling_persegi(s)<<endl;
+	  cout<<"Keliling persegi adalah : "<<keliling_persegi(*s)<<endl;
   }
   const int MAX = 3;
 int main(){
@@ -44,12 +44,12 @@ int main(){
 	  cout<<endl;
 	  for(int i=2 ; i<=MAX ; i++){
 	  
-	  cetak_luas(*ptr[i]);
+	  cetak_luas(&*ptr[i]);
 	  }
 	  cout<<endl;
 	  for (int i=2 ; i<=MAX ; i++){
     	
-    	cetak_keliling(*ptr[i]);
+    	cetak_keliling(&*ptr[i]);
     }
     return 0;
     }
