@@ -23,32 +23,34 @@ using namespace std;
   
   void cetak_luas(int s){
   	
-  	  cout<<"luas persegi adalah : "<<luas_persegi(s)<<endl;
+  	  cout<<"Luas persegi adalah : "<<luas_persegi(s)<<endl;
      }
   
   void cetak_keliling(int s){
   	
-	  cout<<"keliling persegi adalah : "<<keliling_persegi(s)<<endl;
+	  cout<<"Keliling persegi adalah : "<<keliling_persegi(s)<<endl;
   }
   
-  int main(){
+int main(){
   	int sisi[2];
+  	int *ss;
+  	ss=sisi;
   	
   	for(int i=1 ; i<=2; i++){
-  			sisi[2]=0;
+  			*(ss)=0;
   			
 	  cout<<" masukkan sisi persegi ke "<<i<<" : ";
-	  cin>>sisi[i];
+	  cin>>*(ss);
 	  }
 	  cout<<endl;
 	  for(int i=1 ; i<=2 ; i++){
 	  
-	  cetak_luas(sisi[i]);
+	  cetak_luas(*(ss));
 	  }
 	  cout<<endl;
 	  for (int i=1 ; i<=2 ; i++){
     	
-    	cetak_keliling(sisi[i]);
+    	cetak_keliling(*(ss));
     }
     return 0;
     }
