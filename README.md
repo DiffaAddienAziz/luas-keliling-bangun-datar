@@ -30,25 +30,26 @@ using namespace std;
   	
 	  cout<<"Keliling persegi adalah : "<<keliling_persegi(s)<<endl;
   }
-  
+  const int MAX = 3;
 int main(){
-  	int sisi[2];
+  	int sisi[MAX];
+  	int *ptr[MAX];
   	
-  	for(int i=1 ; i<=2; i++){
-  			sisi[2]=0;
+  	for(int i=2 ; i<=MAX; i++){
+  			ptr[i] = &sisi[i]; 
   			
-	  cout<<" Masukkan sisi persegi ke "<<i<<" : ";
-	  cin>>sisi[i];
+	  cout<<" masukkan sisi persegi ke "<<i-1<<" : ";
+	  cin>>*ptr[i];
 	  }
 	  cout<<endl;
-	  for(int i=1 ; i<=2 ; i++){
+	  for(int i=2 ; i<=MAX ; i++){
 	  
-	  cetak_luas(sisi[i]);
+	  cetak_luas(*ptr[i]);
 	  }
 	  cout<<endl;
-	  for (int i=1 ; i<=2 ; i++){
+	  for (int i=2 ; i<=MAX ; i++){
     	
-    	cetak_keliling(sisi[i]);
+    	cetak_keliling(*ptr[i]);
     }
     return 0;
     }
