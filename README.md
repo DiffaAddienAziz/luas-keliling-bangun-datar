@@ -33,24 +33,22 @@ using namespace std;
   
 int main(){
   	int sisi[2];
-  	int *ss;
-  	ss=sisi;
   	
   	for(int i=1 ; i<=2; i++){
-  			*(ss)=0;
+  			sisi[2]=0;
   			
-	  cout<<" masukkan sisi persegi ke "<<i<<" : ";
-	  cin>>*(ss);
+	  cout<<" Masukkan sisi persegi ke "<<i<<" : ";
+	  cin>>sisi[i];
 	  }
 	  cout<<endl;
 	  for(int i=1 ; i<=2 ; i++){
 	  
-	  cetak_luas(*(ss));
+	  cetak_luas(sisi[i]);
 	  }
 	  cout<<endl;
 	  for (int i=1 ; i<=2 ; i++){
     	
-    	cetak_keliling(*(ss));
+    	cetak_keliling(sisi[i]);
     }
     return 0;
     }
